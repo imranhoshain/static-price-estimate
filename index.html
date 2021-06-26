@@ -225,15 +225,15 @@
                                     <div class="estimated estimate_price set_sidebar_qty_and_estimate_price">
 
                                         <ul class="price-list">
-                                            <li>Couch:<span class="Couch">0</span></li>
-                                            <li>Loveseat:<span class="Loveseat">0</span></li>
-                                            <li>Armchair:<span class="Armchair">0</span></li>
-                                            <li>Coffee Table:<span class="Coffee_Table">0</span></li>
-                                            <li>Ent. Center:<span class="Ent_Center">0</span></li>
-                                            <li>TV:<span class="TV">0</span></li>
-                                            <li>Table:<span class="Tables">0</span></li>
-                                            <li>Dining Chair:<span class="DiningChair">0</span></li>
-                                            <li>Barstool:<span class="Barstool">0</span></li>
+                                            <li>Couch:<span class="productqty">0</span></li>
+                                            <li>Loveseat:<span class="productqty">0</span></li>
+                                            <li>Armchair:<span class="productqty">0</span></li>
+                                            <li>Coffee Table:<span class="productqty">0</span></li>
+                                            <li>Ent. Center:<span class="productqty">0</span></li>
+                                            <li>TV:<span class="productqty">0</span></li>
+                                            <li>Table:<span class="productqty">0</span></li>
+                                            <li>Dining Chair:<span class="productqty">0</span></li>
+                                            <li>Barstool:<span class="productqty">0</span></li>
                                         </ul>
 
                                         <div class="price custom_price">
@@ -304,15 +304,12 @@
                 $(".end_price").text('$'+maxtotal);
 
                 // Updating Right Side Labels
-                                            $(".Couch").text($("#inputCouch").val());
-                                            $(".Loveseat").text($("#inputLoveseat").val());
-                                            $(".Armchair").text($("#inputArmchair").val());
-                                            $(".Coffee_Table").text($("#inputCoffeeTable").val());
-                                            $(".Ent_Center").text($("#inputEntCenter").val());
-                                            $(".TV").text($("#inputTV").val());
-                                            $(".Tables").text($("#inputTable").val());
-                                            $(".DiningChair").text($("#inputDiningChair").val());
-                                            $(".Barstool").text($("#inputBarstool").val());
+                for (var i = 0; i < $('.product_qty_amount').length; i++) {
+                    $(".productqty:eq("+i+")").text($(".product_qty_amount:eq("+i+")").val());
+
+                }
+            
+                                         
             
            
         });
@@ -332,16 +329,11 @@
                 $(".end_price").text('$'+maxtotal);
 
 
-                 // Updating Right Side Labels
-                                            $(".Couch").text($("#inputCouch").val());
-                                            $(".Loveseat").text($("#inputLoveseat").val());
-                                            $(".Armchair").text($("#inputArmchair").val());
-                                            $(".Coffee_Table").text($("#inputCoffeeTable").val());
-                                            $(".Ent_Center").text($("#inputEntCenter").val());
-                                            $(".TV").text($("#inputTV").val());
-                                             $(".Tables").text($("#inputTable").val());
-                                            $(".DiningChair").text($("#inputDiningChair").val());
-                                            $(".Barstool").text($("#inputBarstool").val());
+                // Updating Right Side Labels
+                for (var i = 0; i < $('.product_qty_amount').length; i++) {
+                    $(".productqty:eq("+i+")").text($(".product_qty_amount:eq("+i+")").val());
+
+                }
             
             }else{
                 alert("Quantity is Already Zero");
